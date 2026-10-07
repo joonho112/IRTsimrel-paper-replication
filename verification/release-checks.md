@@ -31,7 +31,7 @@ Checked on 7 October 2026 with R 4.6.0 on macOS. The dependency record is in `en
 
 The eight scientific helper modules preserve their original computations. Their parsed expressions agree with the retained implementation after accounting for single-statement braces introduced by formatting. Package archives and retained numerical inputs preserve their original bytes.
 
-The guide's HTML was checked through rendering and static asset validation; a browser appearance review was not performed. GitHub Actions is configured but has not been run on a remote repository. The complete historical Monte Carlo workload, a fresh cross-platform dependency restore, and the retained-only supplementary analyses were not rerun for this release. See `docs/reproduction-scope.md` for the distinction between executable studies, recalculated displays, and retained evidence.
+The guide's HTML was checked through rendering and static asset validation. After publication, the opening page was also inspected in a browser. GitHub Actions passed the retained-evidence checks on Ubuntu and published the guide, as recorded below. The complete historical Monte Carlo workload, a fresh cross-platform restore of all simulation dependencies, and the retained-only supplementary analyses were not rerun for this release. See `docs/reproduction-scope.md` for the distinction between executable studies, recalculated displays, and retained evidence.
 
 To repeat the fast checks:
 
@@ -48,3 +48,9 @@ The public snapshot retains the study inputs, source packages, scientific output
 The public IRW difficulty export is included with its unchanged source license and a verified checksum. A fresh 16-condition IRW calibration run reproduced all 48 compared values within 1e-8. The reduced display-input set rebuilt all 18 numerical figures and 12 computational tables. The two supplementary person-sampling and treatment-effect figure entries in the reproduction map were checked against the manuscript and corrected.
 
 The public snapshot passed all 179 verification checks. Its Git history starts with the reviewed release rather than retaining preparation records. The replication-package author is JoonHo Lee (jlee296@ua.edu); the original IRW attribution is preserved separately.
+
+## GitHub publication
+
+The repository and [online guide](https://joonho112.github.io/IRTsimrel-paper-replication/) were published on 7 October 2026. For the first published source commit, `583a58b`, the [verification workflow](https://github.com/joonho112/IRTsimrel-paper-replication/actions/runs/37621413987) passed all 179 checks on Ubuntu, and the [Pages workflow](https://github.com/joonho112/IRTsimrel-paper-replication/actions/runs/37621413897) rendered and deployed all seven chapters using Quarto 1.9.37.
+
+Pushes to `main` run these workflows automatically. The guide is built from `book/`; its rendered HTML is deployed as a Pages artifact rather than committed to the source branch. Before committing source changes, update the distributed-file checksums with `python3 code/maintenance/release_manifest.py` and run `Rscript run_all.R verify`.

@@ -4,7 +4,7 @@
 
 We use this package to follow one idea through its numerical checks: specify a mean-information index, calibrate an item form to that target, and then ask what carries over to fresh people or to a response-level simulation.
 
-You can read the guide without running code. If you want to run it, open a terminal in the repository root. Commands assume that working directory throughout.
+You can read the guide without running code. To run an example or study, first [download or clone the replication repository](https://github.com/joonho112/IRTsimrel-paper-replication), then open a terminal in its root directory. Commands assume that working directory throughout.
 
 | Goal | First command | What it does |
 |---|---|---|

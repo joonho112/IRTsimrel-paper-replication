@@ -6,6 +6,11 @@ book:
   title: "Reliability-targeted IRT simulation"
   subtitle: "A step-by-step replication guide"
   author: "JoonHo Lee (jlee296@ua.edu)"
+  site-url: https://joonho112.github.io/IRTsimrel-paper-replication/
+  repo-url: https://github.com/joonho112/IRTsimrel-paper-replication
+  repo-branch: main
+  repo-subdir: book
+  repo-actions: [source, issue]
   chapters:
     - index.qmd
     - 01-setup.qmd

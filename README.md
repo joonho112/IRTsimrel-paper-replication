@@ -6,11 +6,18 @@
 
 This repository accompanies *Reliability-Targeted Simulation of Item Response Data: Solving the Inverse Design Problem*. It reproduces the validation studies and displays used in manuscript v6.3. We ask a practical question: can we specify an information level before generating responses, instead of letting an item-generation recipe determine that level implicitly?
 
-Start with the worked example, then reproduce the solver and fresh-draw checks. The [reader's guide](book/index.qmd) explains what each command computes and how to interpret its output. The [reproduction map](manifest/reproduction-map.csv) connects the paper's exhibits to their inputs and scripts.
+Start with the worked example, then reproduce the solver and fresh-draw checks. The [online reader's guide](https://joonho112.github.io/IRTsimrel-paper-replication/) explains what each command computes and how to interpret its output; its source is in [book/](book/index.qmd). The [reproduction map](manifest/reproduction-map.csv) connects the paper's exhibits to their inputs and scripts.
 
 ## Start here
 
-Open `IRTsimrel-paper-replication.Rproj`, or open a terminal in this directory. Use **R 4.3 or newer**; this release was checked with **R 4.6.0**. Python 3 is needed only to rebuild the LaTeX tables. Quarto is optional for reading the guide as a website.
+Download this repository using **Code → Download ZIP**, or clone it:
+
+```sh
+git clone https://github.com/joonho112/IRTsimrel-paper-replication.git
+cd IRTsimrel-paper-replication
+```
+
+Open `IRTsimrel-paper-replication.Rproj`, or open a terminal in the repository directory. Use **R 4.3 or newer**; this release was checked with **R 4.6.0**. Python 3 is needed only to rebuild the LaTeX tables. Quarto is needed only to render the guide locally; the published guide can be read in a browser.
 
 ```sh
 Rscript code/install_dependencies.R

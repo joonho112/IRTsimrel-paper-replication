@@ -1,0 +1,34 @@
+# Author: JoonHo Lee (jlee296@ua.edu)
+.DS_Store
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.library/
+.renv/
+renv/library/
+renv/staging/
+output/*
+!output/README.md
+book/_book/
+book/.quarto/
+data/external/*
+!data/external/README.md
+__pycache__/
+*.pyc
+
+# Local working material does not belong in a release.
+dev/
+log/
+logs/
+private/
+notes/
+drafts/
+tmp/
+temp/
+.env
+.env.*
+*.log
+*.tmp
+*.bak
+*.swp

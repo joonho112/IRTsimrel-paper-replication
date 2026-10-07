@@ -1,0 +1,6 @@
+"candidate","candidate_order","n_attempted","n_fit_success","n_optimizer_ok","n_gradient_ok","n_hessian_ok","n_kkt_ok","n_numerical_ok","n_boundary_cholesky","n_boundary_variance","n_boundary_correlation","n_singular","n_selected","median_elapsed_sec","total_elapsed_worker_sec"
+"original_bobyqa",1,461,461,461,8,458,461,8,355,0,455,456,0,0.850999999999999,500.371
+"retry_bobyqa_tight",2,461,461,461,8,459,461,8,338,0,456,455,0,0.412999999999982,198.187999999999
+"retry_nloptwrap_tight",3,461,461,461,9,459,461,9,385,0,449,444,0,0.225000000000009,114.394
+"retry_nelder_mead",4,461,461,461,8,460,461,8,311,0,437,448,0,0.745999999999981,369.221
+"retry_constrained_nlminb",5,461,461,445,461,461,461,461,333,0,455,333,445,0.26600000000002,125.945

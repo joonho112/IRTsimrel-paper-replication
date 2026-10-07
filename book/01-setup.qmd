@@ -1,0 +1,30 @@
+<!-- Author: JoonHo Lee (jlee296@ua.edu) -->
+
+# Set up the project
+
+Install R 4.3 or newer and Python 3. Quarto is needed only to render this guide. R 4.6.0 was used for the release checks.
+
+```sh
+Rscript code/install_dependencies.R
+Rscript run_all.R verify
+```
+
+The installer checks the reporting and model-fitting dependencies and installs the two frozen IRTsimrel archives locally. It leaves your global IRTsimrel installation alone. This separation matters: the paper's historical fixed-form validation and its later item-population calibration use different package versions.
+
+Use a fresh `Rscript` process for each command. If you work interactively, restart R before switching from 0.3.0 to 0.3.1.
+
+## Check the empirical difficulties
+
+The smallest examples use parametric difficulties. The public IRW difficulty pool is also included. Check it with:
+
+```sh
+Rscript data/fetch_irw_pool.R
+```
+
+The checker verifies the bundled file in `data/irw/` against the published checksum. The file contains 6,143 item estimates from 145 instruments, with the original source and MIT notice alongside it. It contains no individual response records. No download is needed for the studies. The optional `--download` switch independently recovers the same input in the ignored `data/external/` directory.
+
+## Decide how much to run
+
+`--mode smoke` selects a small design. `--mode full` uses the paper's full design. `--pool both` adds IRW conditions where a study varies difficulty source. `--workers 4` runs four independent conditions at once on macOS or Linux; Windows uses one worker.
+
+Full calibration, repeated-sampling, and treatment-effect studies may take hours. Their historical runtimes are supplied for context, not as a promise about your computer. A smoke run is the best local runtime check.

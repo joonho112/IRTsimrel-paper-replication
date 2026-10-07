@@ -1,0 +1,26 @@
+# Author: JoonHo Lee (jlee296@ua.edu)
+project:
+  type: book
+  output-dir: _book
+book:
+  title: "Reliability-targeted IRT simulation"
+  subtitle: "A step-by-step replication guide"
+  author: "JoonHo Lee (jlee296@ua.edu)"
+  chapters:
+    - index.qmd
+    - 01-setup.qmd
+    - 02-example.qmd
+    - 03-validation.qmd
+    - 04-applications.qmd
+    - 05-displays.qmd
+    - 06-checks.qmd
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    number-sections: false
+    link-external-newwindow: true
+execute:
+  eval: false

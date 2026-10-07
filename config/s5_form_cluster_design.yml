@@ -1,0 +1,62 @@
+# Study design and prespecified settings.
+# Author: JoonHo Lee (jlee296@ua.edu)
+# License: MIT
+
+
+schema_version: 1
+seed_namespace: irtsimrel-v2/s5-form-cluster/v1
+global_seed_label: "20260827-phase4-step4.2"
+
+replications_per_structural_cell: 100
+tests: [mh]
+alpha: 0.05
+matching: rest
+decision_timing: frozen_before_phase4_rerun_results
+uncertainty_primary: MH_form_cluster
+logistic_scope: retained_descriptive_point_estimates_only
+
+arms: [uncontrolled, target_060, target_075, target_090]
+reference_arm: target_075
+
+variants:
+  baseline:
+    dif_scale: theta
+    purify: false
+    impact_mean_focal: 0.0
+  logodds:
+    dif_scale: logodds
+    purify: false
+    impact_mean_focal: 0.0
+  purified:
+    dif_scale: theta
+    purify: true
+    impact_mean_focal: 0.0
+  impact:
+    dif_scale: theta
+    purify: false
+    impact_mean_focal: 0.5
+
+rng:
+  kind: Mersenne-Twister
+  normal_kind: Inversion
+  sample_kind: Rejection
+  max_bank_attempts: 20
+
+quadrature:
+  calibration_M: 4000
+  evaluation_M: 20000
+  root_interval: [0.05, 10.0]
+  root_tolerance: 0.000001
+
+inference:
+  ci_level: 0.95
+  bootstrap_replications: 2000
+  bootstrap_method: cell_stratified_form_resampling
+  rate_mcse: stratified_form_cluster_sandwich
+  paired_contrast_mcse: within_form_difference_sandwich
+
+retained_run_cost:
+  s5_core_hours: 78.6506
+  s5_wall_hours_30_workers: 2.6217
+  s5c_core_hours: 105.0659
+  s5c_wall_hours_30_workers: 3.5022

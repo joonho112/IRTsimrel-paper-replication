@@ -1,0 +1,23 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Score-mean comparisons under equal and unequal group precision}\label{tab:s5b-scores}
+{\footnotesize\setlength{\tabcolsep}{4.5pt}\begin{tabular}{llrrrrr}
+\toprule
+Groups & Score & True $\delta$ & \shortstack{Information\\index gap} & Rejection & MCSE & Bias of $\hat d$ \\
+\midrule
+Balanced & Posterior mean & $0.0$ & $-4.43\times 10^{-4}$ & $0.040$ & $0.014$ & $-0.0022$ \\
+Balanced & Sum score & $0.0$ & $-4.43\times 10^{-4}$ & $0.035$ & $0.013$ & $-0.0020$ \\
+Balanced & Weighted likelihood & $0.0$ & $-4.43\times 10^{-4}$ & $0.045$ & $0.015$ & $-0.0017$ \\
+Imbalanced & Posterior mean & $0.0$ & $0.187$ & $0.035$ & $0.013$ & $-0.0025$ \\
+Imbalanced & Sum score & $0.0$ & $0.187$ & $0.040$ & $0.014$ & $-0.0041$ \\
+Imbalanced & Weighted likelihood & $0.0$ & $0.187$ & $0.045$ & $0.015$ & $7.76\times 10^{-4}$ \\
+Balanced & Posterior mean & $0.2$ & $6.30\times 10^{-4}$ & $0.840$ & $0.026$ & $-0.0152$ \\
+Balanced & Sum score & $0.2$ & $6.30\times 10^{-4}$ & $0.830$ & $0.027$ & $-0.0167$ \\
+Balanced & Weighted likelihood & $0.2$ & $6.30\times 10^{-4}$ & $0.835$ & $0.026$ & $-0.0155$ \\
+Imbalanced & Posterior mean & $0.2$ & $0.193$ & $0.905$ & $0.021$ & $-0.0112$ \\
+Imbalanced & Sum score & $0.2$ & $0.193$ & $0.915$ & $0.020$ & $-0.0021$ \\
+Imbalanced & Weighted likelihood & $0.2$ & $0.193$ & $0.870$ & $0.024$ & $-0.0251$ \\
+\bottomrule
+\end{tabular}}
+\floatnote{Each of four 20-item 2PL forms is fixed for 200 replications, with 500 persons per group. Reference ability is $N(0,1)$; focal ability has mean $\delta$ and SD 1 or .6. A pooled TAM fit supplies EAP and WLE scores. Rejection uses two-sided Welch tests at .05. The index gap is reference minus focal. Bias subtracts latent $\delta$ from the score difference standardized by reference-group score SD. MCSE describes binomial uncertainty in rejection, conditional on the form.}
+\end{table}

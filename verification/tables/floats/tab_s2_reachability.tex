@@ -1,0 +1,32 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Production-run statuses after the preliminary screen}
+\label{tab:s2-reachability}
+{\small\begin{tabular}{llrrrrrrr}
+\toprule
+ & & & & & \multicolumn{2}{c}{Not reached} & & \\
+\cmidrule(lr){6-7}
+Arm & Functional & Target & Eligible & Solved & Unreach. & Infeas. & Other & Share \\
+\midrule
+EQC & $\rhotilde$ & 0.50 & 128 & 128 & 0 & 0 & 0 & $0.000$ \\
+EQC & $\rhotilde$ & 0.60 & 128 & 128 & 0 & 0 & 0 & $0.000$ \\
+EQC & $\rhotilde$ & 0.70 & 128 & 128 & 0 & 0 & 0 & $0.000$ \\
+EQC & $\rhotilde$ & 0.80 & 128 & 128 & 0 & 0 & 0 & $0.000$ \\
+EQC & $\rhotilde$ & 0.90 & 127 & 126 & 0 & 1 & 0 & $0.008$ \\
+EQC & $\rhotilde$ & 0.95 & 109 & 105 & 0 & 4 & 0 & $0.037$ \\
+SAC\_INFO & $\rhotilde$ & 0.50 & 128 & 128 & 0 & 0 & 0 & $0.000$ \\
+SAC\_INFO & $\rhotilde$ & 0.60 & 128 & 128 & 0 & 0 & 0 & $0.000$ \\
+SAC\_INFO & $\rhotilde$ & 0.70 & 128 & 126 & 0 & 0 & 2 & $0.000$ \\
+SAC\_INFO & $\rhotilde$ & 0.80 & 128 & 125 & 0 & 0 & 3 & $0.000$ \\
+SAC\_INFO & $\rhotilde$ & 0.90 & 127 & 119 & 0 & 0 & 8 & $0.000$ \\
+SAC\_INFO & $\rhotilde$ & 0.95 & 109 & 107 & 0 & 0 & 2 & $0.000$ \\
+SAC\_MSEM & $\wbar$ & 0.50 & 96 & 95 & 0 & 0 & 1 & $0.000$ \\
+SAC\_MSEM & $\wbar$ & 0.60 & 96 & 90 & 4 & 0 & 2 & $0.042$ \\
+SAC\_MSEM & $\wbar$ & 0.70 & 96 & 85 & 9 & 0 & 2 & $0.094$ \\
+SAC\_MSEM & $\wbar$ & 0.80 & 96 & 67 & 26 & 0 & 3 & $0.271$ \\
+SAC\_MSEM & $\wbar$ & 0.90 & 95 & 49 & 44 & 0 & 2 & $0.463$ \\
+SAC\_MSEM & $\wbar$ & 0.95 & 82 & 21 & 59 & 0 & 2 & $0.720$ \\
+\bottomrule
+\end{tabular}}
+\floatnote{The mean-information procedures use 748 cells. The inverse-information procedure excludes heavy-tailed cells and uses 561. The reported share combines unreachable and infeasible statuses over all eligible cells. These statuses apply to the specified search. Production draws new forms and nodes, so five EQC targets became infeasible after passing the screen in \cref{tab:s2-reachability-unpruned}.}
+\end{table}

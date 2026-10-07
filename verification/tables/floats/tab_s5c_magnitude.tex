@@ -1,0 +1,28 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Effect magnitudes under the two DIF conventions}
+\label{tab:s5c-magnitude}
+{\small\begin{tabular}{lllrrr}
+\toprule
+Convention & Model & Arm & Magnitude & Log odds & ETS delta \\
+\midrule
+Latent scale fixed & 2pl & target 060 & $0.240$ & $0.240$ & $0.56$ \\
+Latent scale fixed & 2pl & target 075 & $0.361$ & $0.361$ & $0.85$ \\
+Latent scale fixed & 2pl & target 090 & $0.754$ & $0.754$ & $1.77$ \\
+Latent scale fixed & 2pl & uncontrolled & $0.516$ & $0.516$ & $1.21$ \\
+Latent scale fixed & 3pl\_g20 & target 060 & $0.306$ & --- & --- \\
+Latent scale fixed & 3pl\_g20 & target 075 & $0.479$ & --- & --- \\
+Latent scale fixed & 3pl\_g20 & target 090 & $1.106$ & --- & --- \\
+Latent scale fixed & 3pl\_g20 & uncontrolled & $0.517$ & --- & --- \\
+Linear predictor fixed & 2pl & target 060 & $0.500$ & $0.500$ & $1.18$ \\
+Linear predictor fixed & 2pl & target 075 & $0.500$ & $0.500$ & $1.18$ \\
+Linear predictor fixed & 2pl & target 090 & $0.500$ & $0.500$ & $1.18$ \\
+Linear predictor fixed & 2pl & uncontrolled & $0.500$ & $0.500$ & $1.18$ \\
+Linear predictor fixed & 3pl\_g20 & target 060 & $0.500$ & --- & --- \\
+Linear predictor fixed & 3pl\_g20 & target 075 & $0.500$ & --- & --- \\
+Linear predictor fixed & 3pl\_g20 & target 090 & $0.500$ & --- & --- \\
+Linear predictor fixed & 3pl\_g20 & uncontrolled & $0.500$ & --- & --- \\
+\bottomrule
+\end{tabular}}
+\floatnote{Entries are median absolute magnitudes. Fixing the difficulty shift at .5 lets the predictor shift $ca_i|\Delta b_i|$ vary; setting $|\Delta b_i|=.5/(ca_i)$ fixes it at .5. A predictor shift equals a conditional log-odds shift only for the 2PL, so ETS delta is reported only for that model.}
+\end{table}

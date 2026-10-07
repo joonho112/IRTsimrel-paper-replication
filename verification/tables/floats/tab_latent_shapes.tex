@@ -1,0 +1,16 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Moments and percentiles from 200,000 draws of each ability distribution}
+\label{tab:latent-shapes}
+{\small\begin{tabular}{lrrrrr}
+\toprule
+Shape & SD & Skewness & Kurtosis & 1st pct. & 99th pct. \\
+\midrule
+Normal & $1.001$ & $-0.007$ & $2.980$ & $-2.33$ & $2.31$ \\
+Skewed & $0.998$ & $0.980$ & $4.374$ & $-1.59$ & $3.01$ \\
+Bimodal & $1.001$ & $-0.003$ & $2.178$ & $-2.03$ & $2.03$ \\
+Heavy-Tailed & $0.999$ & $0.067$ & $7.493$ & $-2.62$ & $2.58$ \\
+\bottomrule
+\end{tabular}}
+\floatnote{All generators have population variance one. The heavy-tailed sample kurtosis is 7.493; population kurtosis is 9. The package bimodal distribution and the separate theory quadrature use different component locations (\cref{app:shapes}).}
+\end{table}

@@ -1,0 +1,16 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Changes in the index when sample variance is replaced by population variance one}
+\label{tab:theta-var}
+{\small\begin{tabular}{lrrrrr}
+\toprule
+Latent shape & Cells & Median shift & Largest shift & Median solver error & Ratio \\
+\midrule
+Bimodal & 186 & $6.42\times 10^{-4}$ & $0.0058$ & $9.32\times 10^{-10}$ & $6.89\times 10^{+5}$ \\
+Heavy-Tailed & 187 & $0.0018$ & $0.0326$ & $1.21\times 10^{-9}$ & $1.51\times 10^{+6}$ \\
+Normal & 187 & $8.46\times 10^{-4}$ & $0.0077$ & $9.62\times 10^{-10}$ & $8.79\times 10^{+5}$ \\
+Skewed & 188 & $0.0012$ & $0.0074$ & $1.03\times 10^{-9}$ & $1.12\times 10^{+6}$ \\
+\bottomrule
+\end{tabular}}
+\floatnote{The form, multiplier and information values are held fixed. Rows summarize absolute shifts by ability shape. The ratio compares the median shift with the median solver residual; it describes these runs rather than a general error relationship.}
+\end{table}

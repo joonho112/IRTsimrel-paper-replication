@@ -1,0 +1,18 @@
+<!-- Author: JoonHo Lee (jlee296@ua.edu) -->
+
+# Start here {.unnumbered}
+
+We use this package to follow one idea through its numerical checks: specify a mean-information index, calibrate an item form to that target, and then ask what carries over to fresh people or to a response-level simulation.
+
+You can read the guide without running code. If you want to run it, open a terminal in the repository root. Commands assume that working directory throughout.
+
+| Goal | First command | What it does |
+|---|---|---|
+| Check the download | `Rscript run_all.R verify` | Hashes files and recomputes numerical checks |
+| Understand calibration | `Rscript run_all.R example` | Runs the paper's 20-item example |
+| Inspect paper figures | `Rscript run_all.R quick` | Rebuilds displays from retained results |
+| Rerun validation | `Rscript run_all.R calibration` | Executes a small calibration design |
+
+The small runs are deliberate entry points. They let you check the software, inspect one output, and understand the design before committing to a full run. They cannot estimate all the paper's performance summaries.
+
+The next chapters cover setup, the worked example, the validation studies, supplementary applications, and checks. The author and maintainer is JoonHo Lee ([jlee296@ua.edu](mailto:jlee296@ua.edu)).

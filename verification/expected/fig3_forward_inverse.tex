@@ -1,0 +1,29 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw=black!60, rounded corners=2pt, align=center, minimum height=1.15cm, text width=2.6cm, inner sep=4pt, fill=black!4},
+  new/.style={box, fill=blue!9, draw=blue!55!black},
+  lab/.style={font=\small\bfseries, anchor=east},
+  val/.style={font=\footnotesize, text width=2.6cm, align=center, text=black!70},
+  arr/.style={-{Latex[length=2mm]}, thick, draw=black!65},
+  node distance=0.36cm
+]
+\node[lab] (fl) at (-0.25,0) {Forward};
+\node[box, right=0.25cm of fl] (f1) {choose $G$ and\\ an item form};
+\node[box, right=of f1] (f2) {compute information\\ or fit a model};
+\node[box, right=of f2] (f3) {observe the\\ information level};
+\node[box, right=of f3] (f4) {generate responses\\ at whatever level\\ resulted};
+\draw[arr] (f1) -- (f2); \draw[arr] (f2) -- (f3); \draw[arr] (f3) -- (f4);
+
+\node[lab] (il) at (-0.25,-2.6) {Inverse};
+\node[box, right=0.25cm of il] (i1) {choose $G$ and\\ a baseline form};
+\node[new, right=of i1] (i2) {declare $\rhotilde^*$ and\\ an interval $[c_L,c_U]$};
+\node[new, right=of i2] (i3) {solve for $c^*$\\ on fixed nodes};
+\node[new, right=of i3] (i4) {evaluate on fresh\\ draws; then\\ generate responses};
+\draw[arr] (i1) -- (i2); \draw[arr] (i2) -- (i3); \draw[arr] (i3) -- (i4);
+
+\node[val, below=0.12cm of i1] {20 items, 2PL\\ $G=N(0,1)$};
+\node[val, below=0.12cm of i2] {$\rhotilde^*=.85$\\ $[0.1,\,10]$};
+\node[val, below=0.12cm of i3] {$c^*=1.278$\\ achieved $.8500$};
+\node[val, below=0.12cm of i4] {fresh $\rhotilde=.8493$\\ (200,000 draws)};
+\end{tikzpicture}

@@ -1,0 +1,11 @@
+# Author: JoonHo Lee (jlee296@ua.edu)
+# Preserve frozen data bytes for checksum verification on every platform.
+*.csv -text
+*.gz -text
+*.pdf -text
+*.R text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.qmd text eol=lf
+*.yml text eol=lf
+*.tex text eol=lf

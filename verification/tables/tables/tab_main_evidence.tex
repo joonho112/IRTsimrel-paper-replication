@@ -1,0 +1,29 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[ht]
+\centering
+\caption{Study designs and evaluation criteria}
+\label{tab:evidence}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{3.6cm}@{}}
+\toprule
+ & Fixed-form calibration grid & Fresh-node holdout study & Fixed-length item-level treatment-effect simulation \\
+\midrule
+Question & Does the solver meet its numerical objective? & How far is the calibrated form from the population index, and how does that depend on $M$? & How do rejection rates change across information targets? \\
+\addlinespace
+Design and denominator & Rasch, 2PL and two 3PL variants $\times$ 4 latent shapes $\times$ 2 difficulty pools $\times$ 4 lengths $\times$ 6 targets; 748 production cells after a feasibility screen, one form per cell & Rasch, 2PL, 3PL ($g=.20$) $\times$ normal, skewed $\times$ 10, 40 items; target .70; 20 seeds at each of 7 node counts $=$ 1,680 calibrations & 6 targets $\times$ 6 effect conditions $\times$ 1,000 independent replications; 20 items, 500 persons; a new form per replication \\
+\addlinespace
+Calibration engine & \texttt{IRTsimrel} 0.3.0 EQC through the study wrapper; $M=20{,}000$; interval $[0.1,10]$; lowest increasing crossing & the same EQC path with the node count varied & study-code one-dimensional root solve for a common slope; 20,000 shared reference draws; $v=1$ \\
+\addlinespace
+Evaluation rule & achieved numerical index on the calibration nodes against the target (own-rule residual) & index on 200,000 fresh draws, with their sample variance, against the target & rejection rates of constant- and varying-effect mixed models; exact binomial intervals \\
+\addlinespace
+Result & 743 successes; MAE $1.5\times10^{-9}$; 5 infeasible cells, all 3PL at targets .90 or .95 & fresh-draw MAE .0117 at $M=500$ and .0014 at $M=50{,}000$; solver residual near $10^{-9}$ throughout & power .466 to .723 (reference mean .4, SD 0); null rejection .063 to .091 (mean 0, SD .4); no per-replication fresh evaluation \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\emph{Note.} MAE $=$ mean absolute error. The first two studies calibrate the mean-information index with the package solver; the third solves the same equation for a common slope in study code. \Cref{app:validation,app:illustration} give the designs, the full tables and the version provenance; \cref{app:algorithms} reports the stochastic calibrations of the same grid.
+\end{minipage}
+\end{table}

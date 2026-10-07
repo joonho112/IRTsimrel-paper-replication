@@ -1,0 +1,16 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Calibration accuracy under each procedure and evaluation rule}
+\label{tab:s2-accuracy}
+{\footnotesize\resizebox{\textwidth}{!}{\begin{tabular}{>{\raggedright\arraybackslash}p{0.17\textwidth}rrrrrr}
+\toprule
+Algorithm & Successful/attempted & Mean dev. & MAE & Max abs. & Within $10^{-2}$ & Median s \\
+\midrule
+EQC & 743/748 & $1.29\times 10^{-9}$ & $1.54\times 10^{-9}$ & $3.81\times 10^{-8}$ & $1.000$ & $26.8$ \\
+SAC (rho-tilde) & 733/748 & $-1.45\times 10^{-4}$ & $0.0029$ & $0.0394$ & $0.914$ & $24.0$ \\
+SAC (superpopulation) & 377/380 & $-3.44\times 10^{-4}$ & $0.0049$ & $0.0292$ & $0.865$ & $17.6$ \\
+SAC (w-bar) & 407/561 & $-0.0013$ & $0.0021$ & $0.0367$ & $0.936$ & $28.0$ \\
+\bottomrule
+\end{tabular}}}
+\floatnote{Fixed-form EQC and SAC use version 0.3.0. EQC error uses its own nodes; SAC error uses fresh nodes and frozen presample variance. The inverse-information row includes 407 successes among 561 production cells, distinct from the 576-cell prescreen. The version 0.3.1 form-population study attempted 380 length-20/40 conditions after 368 exclusions and targets transformed mean information across forms. Error and runtime summaries condition on success, so the rows are not direct accuracy rankings.}
+\end{table}

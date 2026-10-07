@@ -1,0 +1,26 @@
+recipe_id,group,label,provenance,model,n_items,beta_dist,beta_mu,beta_sigma,lambda_spec,lambda_mu_log,lambda_sigma_log,lambda_fixed,ab_rho,guessing_dist,guessing_value,notes
+A1,baseline,"Rasch, 10 items",package-default,rasch,10,normal,0,1,fixed,NA,NA,1.0,NA,none,NA,the shortest form in common use
+A2,baseline,"Rasch, 20 items",package-default,rasch,20,normal,0,1,fixed,NA,NA,1.0,NA,none,NA,the modal short-form length
+A3,baseline,"Rasch, 40 items",package-default,rasch,40,normal,0,1,fixed,NA,NA,1.0,NA,none,NA,
+A4,baseline,2PL at the package defaults,package-default,2pl,20,normal,0,1,lognormal,0,0.3,NA,-0.3,none,NA,IRTsimrel 0.3.0 documented defaults for sim_item_params
+A5,baseline,"2PL, wider discriminations, independent",archetype,2pl,20,normal,0,1,lognormal,0,0.5,NA,0,none,NA,
+A6,baseline,"2PL, moment-matched wide discriminations",archetype,2pl,20,normal,0,1,uniform,NA,NA,NA,0,none,NA,"lognormal moment-matched to U(0.5, 2.0): mean 1.25, sd 0.433. The package has no uniform discrimination generator, so the recipe is not labelled uniform."
+B1,length,"2PL, 5 items",archetype,2pl,5,normal,0,1,lognormal,0,0.5,NA,0,none,NA,
+B2,length,"2PL, 10 items",archetype,2pl,10,normal,0,1,lognormal,0,0.5,NA,0,none,NA,
+B3,length,"2PL, 20 items",archetype,2pl,20,normal,0,1,lognormal,0,0.5,NA,0,none,NA,"same generator as B1, B2, B4, B5"
+B4,length,"2PL, 40 items",archetype,2pl,40,normal,0,1,lognormal,0,0.5,NA,0,none,NA,
+B5,length,"2PL, 60 items",archetype,2pl,60,normal,0,1,lognormal,0,0.5,NA,0,none,NA,
+C1,spread,"2PL, narrow difficulties",archetype,2pl,20,normal,0,0.5,lognormal,0,0.5,NA,0,none,NA,
+C2,spread,"2PL, standard difficulties",archetype,2pl,20,normal,0,1,lognormal,0,0.5,NA,0,none,NA,identical to B3; kept so the spread sweep is complete
+C3,spread,"2PL, wide difficulties",archetype,2pl,20,normal,0,1.5,lognormal,0,0.5,NA,0,none,NA,
+C4,spread,"2PL, uniform difficulties",archetype,2pl,20,uniform,0,2,lognormal,0,0.5,NA,0,none,NA,"beta ~ U(-2, 2)"
+D1,discrimination,"2PL, low fixed discrimination",archetype,2pl,20,normal,0,1,fixed,NA,NA,0.6,NA,none,NA,
+D2,discrimination,"2PL, unit fixed discrimination",archetype,2pl,20,normal,0,1,fixed,NA,NA,1.0,NA,none,NA,
+D3,discrimination,"2PL, D-scaled fixed discrimination",archetype,2pl,20,normal,0,1,fixed,NA,NA,1.7,NA,none,NA,1.7 is the normal-metric scaling constant used as a discrimination
+D4,discrimination,"2PL, high fixed discrimination",archetype,2pl,20,normal,0,1,fixed,NA,NA,2.5,NA,none,NA,
+E1,guessing,"3PL, fixed guessing .20",package-default,3pl,20,normal,0,1,lognormal,0,0.3,NA,-0.3,fixed,0.20,the four-option multiple-choice convention
+E2,guessing,"3PL, Beta(5,17) guessing",package-default,3pl,20,normal,0,1,lognormal,0,0.3,NA,-0.3,beta,NA,IRTsimrel default guessing generator; mean 5/22 = .227
+E3,guessing,"3PL, uniform guessing",package-default,3pl,20,normal,0,1,lognormal,0,0.3,NA,-0.3,uniform,NA,"g ~ U(0.10, 0.30)"
+F1,anchored,IL-HTE replication design,gilbert-jebs-2023,rasch,20,normal,0,1,fixed,NA,NA,1.7,NA,none,NA,"Gilbert, Kim and Miratrix (2023) JEBS: logit, disc fixed at 1.7, b ~ N(0,1), theta ~ N(0,1). Held locally; the S6 target"
+F2,anchored,v1 validation baseline,irtsimrel-v1,2pl,15,normal,0,1,lognormal,0,0.3,NA,-0.3,none,NA,the shortest length of this paper's own v1 validation study
+F3,anchored,DPMirt tier form,dpmirt-study,2pl,16,normal,0,1,lognormal,0,0.3,NA,-0.3,none,NA,the item count of the DPMirt reliability ladder's middle tier

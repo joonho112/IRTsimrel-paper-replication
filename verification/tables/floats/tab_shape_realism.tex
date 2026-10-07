@@ -1,0 +1,21 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Design shapes compared with 504 fitted IRW ability distributions}\label{tab:shape-realism}
+{\small\begin{tabular}{lrrlll}
+\toprule
+ & Skewness & Excess kurtosis & & & \\
+\midrule
+\multicolumn{6}{l}{\itshape This design} \\
+\quad Normal & $-0.007$ & $-0.020$ & & & \\
+\quad Skewed & $0.980$ & $1.374$ & & & \\
+\quad Bimodal & $-0.003$ & $-0.822$ & & & \\
+\quad Heavy-Tailed & $0.067$ & $4.493$ & & & \\
+\addlinespace
+\multicolumn{6}{l}{\itshape 504 IRW instruments, fitted latent densities} \\
+\quad 10th percentile & $-1.545$ & $-0.122$ & & & \\
+\quad Median & $0.178$ & $3.584$ & & & \\
+\quad 90th percentile & $1.828$ & $14.976$ & & & \\
+\bottomrule
+\end{tabular}}
+\floatnote{Design rows use 200,000 generator draws; IRW rows give quantiles across fitted distributions. Both report excess kurtosis. The heavy-tailed sample value is 4.493, compared with population value 6; 212 of 504 fitted distributions (42.1\%) exceed the sample value. IRW densities depend on the fitted response model and grid.}
+\end{table}

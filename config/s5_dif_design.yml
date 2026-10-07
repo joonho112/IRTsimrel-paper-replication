@@ -1,0 +1,40 @@
+# Study design and prespecified settings.
+# Author: JoonHo Lee (jlee296@ua.edu)
+# License: MIT
+
+
+global_seed: 20260827
+
+factors:
+  model:        [2pl, 3pl_g20]
+  pool:         [parametric, irw]
+  latent_shape: [normal, skew_pos]
+  n_items:      [20, 40]
+  n_per_group:  [500, 1000]
+
+arms:
+  uncontrolled: {kind: uncontrolled, c: 1}
+  target_060:   {kind: targeted, target_rho: 0.60}
+  target_075:   {kind: targeted, target_rho: 0.75}
+  target_090:   {kind: targeted, target_rho: 0.90}
+
+dif:
+  conditions: [null, dif]
+  share_of_items: 0.20
+  beta_shift: 0.5
+  tests: [mh, lr]
+  alpha: 0.05
+  matching: rest
+
+replications: 1000
+
+common_random_numbers: true
+
+factor_contrasts:
+  - {name: length, levels: [40, 20], factor: n_items}
+  - {name: model, levels: [3pl_g20, 2pl], factor: model}
+  - {name: sample_size, levels: [1000, 500], factor: n_per_group}
+  - {name: pool, levels: [irw, parametric], factor: pool}
+  - {name: shape, levels: [skew_pos, normal], factor: latent_shape}
+
+reference_arm_for_contrasts: target_075

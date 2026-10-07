@@ -1,0 +1,25 @@
+<!-- Author: JoonHo Lee (jlee296@ua.edu) -->
+
+# Rebuild and trace the displays
+
+```sh
+Rscript run_all.R quick
+```
+
+The quick route first verifies the release inputs. It then runs the figure scripts in separate R processes and recalculates the selected numerical LaTeX tables with Python's standard library. It writes 18 numerical figures as PDF and PNG, plus 12 LaTeX table files. The conceptual Figure 3 is supplied separately as TeX source.
+
+Each figure script names the CSVs it reads. `manifest/reproduction-map.csv` connects the final manuscript labels to those script and file names. Historical file numbers can differ from the final display number; use the map instead of inferring the number from a filename.
+
+The final approved table fragments are under `verification/tables/`. Some are prose or reference tables. Others were produced by historical aggregations that are not rerun by `quick`. Their inclusion provides an inspectable reference; it does not turn copying a table into recalculating its numbers.
+
+## Inspect a new simulation instead
+
+The quick route always uses the retained paper inputs. To examine your newly generated results, run:
+
+```sh
+Rscript run_all.R summarize --study calibration --mode smoke
+Rscript run_all.R summarize --study nodes --mode smoke
+Rscript run_all.R summarize --study treatment --mode smoke
+```
+
+The resulting `summary.csv` stays beside that run. No command silently replaces the retained paper inputs with smoke results. If you extend a design, use its new output for your own analysis and retain its session record.

@@ -1,0 +1,35 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Endpoint comparisons in the two item-level treatment-effect simulations}
+\label{tab:s6-arms}
+{\small\begin{tabular}{llrrrr}
+\toprule
+\multicolumn{6}{l}{\emph{Panel A. Fixed length: targets .50 and .90}} \\
+ & & \multicolumn{2}{c}{SE ratio} & \multicolumn{2}{c}{Rejection rate} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Mean & SD & low $\rhotilde$ & high $\rhotilde$ & low $\rhotilde$ & high $\rhotilde$ \\
+\midrule
+$0.0$ & $0.0$ & $1.008$ & $1.052$ & $0.060$ & $0.041$ \\
+$0.0$ & $0.2$ & $0.959$ & $1.001$ & $0.063$ & $0.050$ \\
+$0.0$ & $0.4$ & $0.901$ & $0.894$ & $0.076$ & $0.075$ \\
+$0.4$ & $0.0$ & $1.007$ & $1.053$ & $0.466$ & $0.723$ \\
+$0.4$ & $0.2$ & $0.953$ & $0.998$ & $0.446$ & $0.703$ \\
+$0.4$ & $0.4$ & $0.900$ & $0.892$ & $0.442$ & $0.672$ \\
+\bottomrule
+\end{tabular}}
+\vspace{0.6em}
+{\scriptsize\begin{adjustbox}{max width=\textwidth}\begin{tabular}{llrrrrl}
+\toprule
+\multicolumn{7}{l}{\emph{Panel B. Varying length and target}} \\
+SD & Analysis & Diagonal & Length & Target & Contrast SE & Endpoint $n$ \\
+\midrule
+$0.1$ & Resolved fits & $0.074$ & $-0.018$ & $0.092$ & $0.022$ & 196/200/194/200 \\
+$0.1$ & Unresolved as non-detections & $0.075$ & $-0.015$ & $0.090$ & $0.022$ & 200/200/200/200 \\
+$0.2$ & Resolved fits & $0.454$ & $-0.014$ & $0.468$ & $0.030$ & 199/200/194/200 \\
+$0.2$ & Unresolved as non-detections & $0.455$ & $-0.005$ & $0.460$ & $0.030$ & 200/200/200/200 \\
+$0.4$ & Resolved fits & $0.271$ & $-0.014$ & $0.286$ & $0.024$ & 199/200/199/200 \\
+$0.4$ & Unresolved as non-detections & $0.275$ & $-0.010$ & $0.285$ & $0.024$ & 200/200/200/200 \\
+\bottomrule
+\end{tabular}\end{adjustbox}}
+\floatnote{Panel A uses 20 items and targets .50 and .90, with 1,000 replications per condition. Divide the listed reference effect means and SDs by 1.7 for the ability scale. SE ratio is mean fitted SE divided by empirical estimator SD; rejection uses the two-sided .05 test. Panel B applies \cref{eq:app-paths}. Endpoint counts follow $(10,.80)$, $(40,.80)$, $(10,.94)$, $(40,.94)$. Heterogeneity tests use the equal $\chi^2_1/\chi^2_2$ mixture at .05. The full grid has 5,371 resolved of 5,400 planned fits. The two averaged contrasts share endpoints and have the same independent-endpoint SE; sensitivity rows count unresolved fits as non-detections.}
+\end{table}

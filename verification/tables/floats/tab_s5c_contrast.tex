@@ -1,0 +1,20 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Length and model contrasts under four DIF variants at target .75}
+\label{tab:s5c-contrast}
+{\scriptsize\setlength{\tabcolsep}{2pt}\begin{tabular}{>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\centering\arraybackslash}p{0.195\textwidth}>{\centering\arraybackslash}p{0.195\textwidth}>{\centering\arraybackslash}p{0.195\textwidth}}
+\toprule
+Factor & Convention & Uncontr. [95\% CI] & Targeted [95\% CI] & Paired difference [95\% CI] \\
+\midrule
+Test length, 40 vs 20 & Baseline (latent scale) & \shortstack{$-0.047$\\[-0.2ex]{\tiny $[-0.058,\,-0.035]$}} & \shortstack{$-0.250$\\[-0.2ex]{\tiny $[-0.263,\,-0.238]$}} & \shortstack{$-0.203$\\[-0.2ex]{\tiny $[-0.213,\,-0.193]$}} \\
+Test length, 40 vs 20 & Linear predictor fixed & \shortstack{$-0.042$\\[-0.2ex]{\tiny $[-0.054,\,-0.029]$}} & \shortstack{$0.043$\\[-0.2ex]{\tiny $[0.031,\,0.056]$}} & \shortstack{$0.086$\\[-0.2ex]{\tiny $[0.077,\,0.094]$}} \\
+Test length, 40 vs 20 & Purified matching & \shortstack{$-0.029$\\[-0.2ex]{\tiny $[-0.041,\,-0.017]$}} & \shortstack{$-0.243$\\[-0.2ex]{\tiny $[-0.256,\,-0.231]$}} & \shortstack{$-0.214$\\[-0.2ex]{\tiny $[-0.225,\,-0.204]$}} \\
+Test length, 40 vs 20 & With impact & \shortstack{$0.099$\\[-0.2ex]{\tiny $[0.085,\,0.114]$}} & \shortstack{$-0.175$\\[-0.2ex]{\tiny $[-0.188,\,-0.160]$}} & \shortstack{$-0.274$\\[-0.2ex]{\tiny $[-0.287,\,-0.261]$}} \\
+Model, 3PL vs 2PL & Baseline (latent scale) & \shortstack{$-0.150$\\[-0.2ex]{\tiny $[-0.162,\,-0.138]$}} & \shortstack{$-0.030$\\[-0.2ex]{\tiny $[-0.043,\,-0.018]$}} & \shortstack{$0.120$\\[-0.2ex]{\tiny $[0.109,\,0.130]$}} \\
+Model, 3PL vs 2PL & Linear predictor fixed & \shortstack{$-0.168$\\[-0.2ex]{\tiny $[-0.180,\,-0.156]$}} & \shortstack{$-0.200$\\[-0.2ex]{\tiny $[-0.212,\,-0.188]$}} & \shortstack{$-0.032$\\[-0.2ex]{\tiny $[-0.041,\,-0.023]$}} \\
+Model, 3PL vs 2PL & Purified matching & \shortstack{$-0.146$\\[-0.2ex]{\tiny $[-0.158,\,-0.134]$}} & \shortstack{$-0.029$\\[-0.2ex]{\tiny $[-0.042,\,-0.016]$}} & \shortstack{$0.117$\\[-0.2ex]{\tiny $[0.107,\,0.128]$}} \\
+Model, 3PL vs 2PL & With impact & \shortstack{$-0.251$\\[-0.2ex]{\tiny $[-0.266,\,-0.236]$}} & \shortstack{$-0.036$\\[-0.2ex]{\tiny $[-0.049,\,-0.022]$}} & \shortstack{$0.215$\\[-0.2ex]{\tiny $[0.203,\,0.228]$}} \\
+\bottomrule
+\end{tabular}}
+\floatnote{Contrasts weight forms equally; paired differences are targeted minus uncalibrated, in probability units. Each variant uses 100 paired forms per cell across 32 cells. The 95\% intervals use 2,000 within-cell whole-form bootstrap samples shared across arms and variants. The four variants change the effect scale, matching or group means separately.}
+\end{table}

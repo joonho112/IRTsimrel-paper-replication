@@ -1,0 +1,17 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Differences between inverse-information and mean-information multipliers}
+\label{tab:jensen-gap}
+{\small\begin{tabular}{lrrrr}
+\toprule
+Sandwich width & Cells & Median width & Median gap in $c$ & Share with positive gap \\
+\midrule
+Q1 narrowest & 102 & $7.75\times 10^{-4}$ & $-4.66\times 10^{-4}$ & $0.480$ \\
+Q2 & 102 & $0.0027$ & $0.0042$ & $0.569$ \\
+Q3 & 101 & $0.0065$ & $0.0245$ & $0.673$ \\
+Q4 widest & 102 & $0.0188$ & $0.1066$ & $0.755$ \\
+all & 407 & $0.0040$ & $0.0114$ & $0.619$ \\
+\bottomrule
+\end{tabular}}
+\floatnote{The 407 cells with both solutions are grouped by the gap $\rhotilde-\wbar$ at a common multiplier. The reported multiplier difference is inverse-information minus mean-information. It combines stochastic error and branch differences, so its sign need not follow the index ordering. Separately, the index ordering held in all 743 evaluated cells, with smallest gap $2.71\times10^{-5}$.}
+\end{table}

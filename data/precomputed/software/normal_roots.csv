@@ -1,0 +1,2 @@
+"root_id","c","log_c","rho","residual","kind","d_rho_d_log_c","direction","branch_id","branch_lower","branch_upper","near_extremum","selected","bracket_lower","bracket_upper","iterations","estimated_precision"
+1,1.27785738949549,0.245184760914677,0.850000001992248,1.9922481442336e-09,"crossing",0.183613450836173,"increasing",1,0.1,10,FALSE,TRUE,1.27774830201876,1.27810749851701,2,5.00000000097645e-07

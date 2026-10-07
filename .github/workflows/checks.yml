@@ -1,0 +1,16 @@
+# Author: JoonHo Lee (jlee296@ua.edu)
+name: Check replication inputs
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.6.0'
+          use-public-rspm: true
+      - name: Install verification dependency
+        run: Rscript -e 'install.packages("digest", repos="https://cloud.r-project.org")'
+      - name: Verify retained evidence and numerical identities
+        run: Rscript run_all.R verify

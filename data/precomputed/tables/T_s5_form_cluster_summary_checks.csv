@@ -1,0 +1,15 @@
+"metric","value"
+"planned_forms_per_structural_cell",100
+"observed_forms_per_structural_cell_min",100
+"observed_forms_per_structural_cell_max",100
+"bootstrap_replications",2000
+"final_seed_collisions",0
+"mh_attempts",3069600
+"mh_successes",3057047
+"mh_failures",12553
+"form_arm_kind_records_with_any_mh_failure",4912
+"independent_form_clusters_with_any_mh_failure",392
+"reached_form_arm_kind_records_with_all_mh_tests_failed",2
+"unreachable_arm_rows",180
+"retained_points_inside_cluster_bootstrap_ci",47
+"retained_points_compared",48

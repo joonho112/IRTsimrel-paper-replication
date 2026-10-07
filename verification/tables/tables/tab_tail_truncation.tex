@@ -1,0 +1,28 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[!htbp]
+\centering
+\caption{The truncation artifact: indices of one form under a standardized $t_5$ and a normal population as the quadrature range widens}
+\label{tab:tail-trunc}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rrrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{standardized $t_5$} & \multicolumn{3}{c}{standard normal} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Range $\pm$ & excluded mass & $\rhotilde$ & $\rhopw$ & $\wbar$ (finite rule) & $\rhotilde$ & $\rhopw$ & $\wbar$ \\
+\midrule
+6 & $1.85\times10^{-3}$ & .7716 & .7642 & .7576 & .7697 & --- & .7612 \\
+8 & $4.93\times10^{-4}$ & .7721 & .7645 & .7552 & .7697 & --- & .7612 \\
+12 & $7.09\times10^{-5}$ & .7724 & .7648 & .7497 & .7697 & --- & .7612 \\
+20 & $5.78\times10^{-6}$ & .7725 & .7649 & .7216 & .7697 & --- & .7612 \\
+40 & $1.84\times10^{-7}$ & .7726 & .7650 & .0488 & .7697 & --- & .7612 \\
+80 & $5.78\times10^{-9}$ & .7726 & .7650 & $1.03\times10^{-8}$ & .7697 & --- & .7612 \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\emph{Note.} The same 20-item 2PL form is evaluated on density-weighted grids truncated at $\pm$ the stated range, with the represented distribution restandardized to variance one. Under the normal population the three indices are stable in every decimal shown. Under the $t_5$ population the mean-information and pointwise indices are stable while the finite-rule inverse-information index falls toward zero as more of the tail is represented, which is the finite form of \cref{prop:tail}: its population value is zero at every range.
+\end{minipage}
+\end{table}

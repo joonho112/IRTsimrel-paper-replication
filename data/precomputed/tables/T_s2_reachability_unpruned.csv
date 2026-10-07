@@ -1,0 +1,7 @@
+"target","tilde_eligible","tilde_unreachable","tilde_near_boundary_0.001","wbar_eligible","wbar_unreachable","wbar_near_boundary_0.001","endpoint_rule","feasibility_quadrature_M","tilde_share","wbar_share"
+0.5,128,0,0,96,0,0,"strict_interior_lo_lt_target_lt_hi",20000,0,0
+0.6,128,0,0,96,3,0,"strict_interior_lo_lt_target_lt_hi",20000,0,0.03125
+0.7,128,0,0,96,10,0,"strict_interior_lo_lt_target_lt_hi",20000,0,0.104166666666667
+0.8,128,0,0,96,23,0,"strict_interior_lo_lt_target_lt_hi",20000,0,0.239583333333333
+0.9,128,1,0,96,52,4,"strict_interior_lo_lt_target_lt_hi",20000,0.0078125,0.541666666666667
+0.95,128,19,3,96,79,2,"strict_interior_lo_lt_target_lt_hi",20000,0.1484375,0.822916666666667

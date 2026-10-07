@@ -1,0 +1,28 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[ht]
+\centering
+\caption{Objects of the paper and the corresponding functions of \texttt{IRTsimrel} 0.3.1}
+\label{tab:function-mapping}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.9cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{4.7cm}@{}}
+\toprule
+Object in the paper & Function & What it does \\
+\midrule
+Latent distribution $G$ (\cref{subsec:model}) & \texttt{sim\_latentG()} & draws abilities from the built-in shapes, standardized to mean zero and variance one before any location-scale change \\
+Item form $\{(\beta_i,\lambda_{i,0})\}$ (\cref{subsec:model}) & \texttt{sim\_item\_params()} & generates difficulties (parametric or IRW pool) and baseline discriminations with the copula dependence \\
+Fixed-node calibration (\cref{subsec:eqc}) & \texttt{eqc\_calibrate()} & scans the declared interval, selects a crossing by the branch policy, refines it, and returns $c^*$, the achieved value, the residual, the calibrated form and the status \\
+Stochastic calibration (\cref{subsec:sac}) & \texttt{sac\_calibrate()} & runs the projected recursion with fresh batches, optional form redraws, tail averaging and finite-run diagnostics \\
+The three indices (\cref{subsec:target}) & \texttt{compute\_rho\_tilde()}\newline \texttt{compute\_rho\_bar()}\newline (pointwise: no export) & evaluate the mean-information and the inverse-information (\texttt{"msem"}) index of a form on supplied nodes under a stated variance; the pointwise index has no package function and is computed by the code in \cref{app:sd02} \\
+Fresh-draw evaluation (\cref{subsec:fresh-eval}) & the index functions on new draws from \texttt{sim\_latentG()} & the independent evaluation of a calibrated form \\
+Response generation (step five of \cref{subsec:workflow}) & \texttt{simulate\_response\_data()} & generates response matrices from a calibrated form for a chosen number of persons \\
+Fitted-score reliability (\cref{app:targets}) & \texttt{compute\_reliability\_tam()} & fits a model with TAM and returns its EAP and WLE reliability coefficients \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\emph{Note.} In \texttt{reliability\_metric}, \texttt{"info"} selects mean information and \texttt{"msem"} selects inverse information. Release 0.3.1 permits inverse-information calibration only through SAC. That API restriction reflects its potentially nonmonotone objective; it does not make inversion impossible. All function names are exports of the frozen release.
+\end{minipage}
+\end{table}

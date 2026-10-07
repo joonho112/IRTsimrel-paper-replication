@@ -1,0 +1,7 @@
+"quantity","n","criterion_type","n_within_gate","max_abs_difference","median_abs_difference"
+"empirical_sd",12,"relative_equivalence_margin_5pct",12,0.00393021052421968,0.00180192764993455
+"mean_estimate",12,"bonferroni_difference_band",12,0.00663147731894465,0.0014879044722103
+"mean_se",12,"relative_equivalence_margin_5pct",12,0.0010606569081576,0.000529882503071747
+"reject_rate",12,"bonferroni_difference_band",12,0.0205000000000001,0.0085
+"se_ratio",12,"relative_equivalence_margin_5pct",12,0.0198877727125626,0.00830595534152423
+"sig_het_rate",12,"bonferroni_difference_band",12,0.00700000000000001,0.0045

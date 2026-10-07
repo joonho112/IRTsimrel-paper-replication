@@ -1,0 +1,6 @@
+"contrast","factor","n_cells_high","n_cells_low","delta_uncontrolled","delta_targeted","did","pairing","inference_status"
+"length","n_items",16,16,-0.0370720272828751,-0.247863360753984,-0.210791333471109,"structural_cell_point_contrasts","deferred_form_cluster_records_not_retained"
+"model","model",16,16,-0.150950470400975,-0.0224962445101989,0.128454225890776,"structural_cell_point_contrasts","deferred_form_cluster_records_not_retained"
+"sample_size","n_per_group",16,16,0.209969992387762,0.230788662372501,0.020818669984739,"structural_cell_point_contrasts","deferred_form_cluster_records_not_retained"
+"pool","pool",16,16,-0.0341220343476134,-0.006934490608555,0.0271875437390585,"structural_cell_point_contrasts","deferred_form_cluster_records_not_retained"
+"shape","latent_shape",16,16,0.00343498894931138,-0.00099334189107092,-0.00442833084038224,"structural_cell_point_contrasts","deferred_form_cluster_records_not_retained"

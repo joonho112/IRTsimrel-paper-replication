@@ -1,0 +1,122 @@
+# Study design and prespecified settings.
+# Author: JoonHo Lee (jlee296@ua.edu)
+# License: MIT
+
+
+global_seed: 20260826
+
+s2:
+  factors:
+    model:        [rasch, 2pl, 3pl_g20, 3pl_beta]
+    latent_shape: [normal, bimodal, skew_pos, heavy_tail]
+    pool:         [parametric, irw]
+    n_items:      [10, 20, 40, 60]
+
+  target_ladder: [0.50, 0.60, 0.70, 0.80, 0.90, 0.95]
+  target_provenance: >
+    IRW public dichotomous quantiles q10 .532, q25 .648, q50 .775, q75 .859,
+    q90 .915, rounded outward to a regular ladder and extended to .95.
+
+  feasibility:
+    c_bounds: [0.1, 10]
+    M: 20000
+
+  algorithms:
+    eqc:
+      metric: info
+      M: 20000
+      c_bounds: [0.1, 10]
+      root_policy: lowest_increasing
+      estimand: fixed_form
+    sac_info:
+      metric: info
+      M_pre: 20000
+      M_per_iter: 1000
+      n_iter: 1000
+      c_bounds: [0.05, 20]
+      resample_items: false
+      warm_start_from: eqc
+      estimand: fixed_form
+    sac_cold:
+      metric: info
+      M_pre: 20000
+      M_per_iter: 1000
+      n_iter: 1000
+      c_bounds: [0.05, 20]
+      resample_items: false
+      estimand: fixed_form
+    sac_msem:
+      metric: msem
+      M_pre: 20000
+      M_per_iter: 1000
+      n_iter: 1000
+      c_bounds: [0.05, 20]
+      resample_items: false
+      warm_start_from: eqc
+      estimand: fixed_form
+      exclude_shapes: [heavy_tail]
+    sac_superpop:
+      schema_version: 2
+      metric: info
+      M_pre: 20000
+      M_per_iter: 1000
+      n_iter: 1000
+      c_bounds: [0.05, 20]
+      resample_items: true
+      item_aggregation: functional_of_mean_information
+      primary_reliability: rho_at_expected_information
+      descriptive_reliability: mean_random_form_reliability
+      warm_start_from: eqc
+      estimand: item_superpopulation
+      only_n_items: [20, 40]
+      preflight_controls:
+        n_forms: 8
+        M: 1000
+        split_check: true
+        split_log_tolerance: 0.4054651081081644
+        branch_margin: 0.01
+        max_consecutive_hits: 5
+        max_post_burn_hit_rate: 0.10
+      evaluation_controls:
+        n_forms: 20
+        M: 1000
+        conf_level: 0.95
+        probs: [0.025, 0.5, 0.975]
+
+  replication:
+    K: 1000
+    n_persons: [100, 250, 500, 1000, 2000]
+
+s3a_eqc_M:
+  M: [500, 1000, 2500, 5000, 10000, 20000, 50000]
+  M_holdout: 200000
+  n_seeds: 20
+  cells:
+    model:        [rasch, 2pl, 3pl_g20]
+    latent_shape: [normal, skew_pos]
+    n_items:      [10, 40]
+  target: 0.70
+
+s3b_sac_step:
+  a:          [0.5, 1, 2]
+  A:          [10, 50, 200]
+  gamma:      [0.55, 0.67, 0.9]
+  n_iter:     [100, 300, 1000]
+  M_per_iter: [500, 1000]
+  fractional: true
+  n_seeds: 10
+  cells:
+    model:        [2pl, 3pl_g20]
+    latent_shape: [normal, skew_pos, bimodal]
+    n_items:      [20]
+  target: 0.70
+
+s4:
+  model:        [rasch, 2pl]
+  target:       [0.60, 0.75, 0.90]
+  latent_shape: [normal, skew_pos]
+  n_items:      [20, 40]
+  n_persons:    [500, 1000]
+  n_reps: 200
+  estimator: TAM
+  scale_alignment: mean_log_lambda

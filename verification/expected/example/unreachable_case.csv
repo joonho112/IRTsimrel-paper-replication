@@ -1,0 +1,2 @@
+"target","multiplier","achieved","discrepancy","root_status","calibration_status","target_status","topology_status","root_count","min_detected","max_detected"
+0.95,0.2,0.0208940310032504,-0.92910596899675,"above_upper","infeasible","infeasible_above_range","resolved",0,0.00534948274400527,0.0208940310032504

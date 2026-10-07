@@ -1,0 +1,28 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[!htbp]
+\centering
+\caption{One 10-item 2PL form under a standard normal population at increasing multipliers}
+\label{tab:guttman}
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+$c$ & mean information $A(c)$ & $\rhotilde$ & $\rhopw$ & $\wbar$ (finite rule) & $\E[1/\Jinfo]$ (finite rule) \\
+\midrule
+1 & 1.8 & .6469 & .6419 & .6371 & .570 \\
+5 & 13.8 & .9323 & .9064 & .1538 & 5.502 \\
+10 & 28.2 & .9657 & .9278 & $5.91\times10^{-12}$ & $1.69\times10^{11}$ \\
+20 & 56.7 & .9827 & .9131 & $3.00\times10^{-38}$ & $3.33\times10^{37}$ \\
+50 & 142.0 & .9930 & .7819 & $1.02\times10^{-119}$ & $9.79\times10^{118}$ \\
+100 & 284.0 & .9965 & .5226 & $8.77\times10^{-257}$ & $1.14\times10^{256}$ \\
+500 & 1420.3 & .9993 & .1412 & 0 & $\infty$ \\
+2000 & 5681.1 & .9998 & .0432 & 0 & $\infty$ \\
+20000 & 56811.0 & 1.0000 & .0056 & 0 & $\infty$ \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\emph{Note.} Evaluated on 60,011 density-weighted nodes with $v=1$. As the multiplier grows the mean-information index approaches one (\cref{prop:overlap}), the pointwise index falls after its maximum (\cref{prop:vanish}), and the finite-rule inverse-information index collapses because the mean reciprocal information explodes; at $c=500$ the finite rule returns an infinite mean reciprocal. The multipliers beyond 10 lie outside any interval used in this paper.
+\end{minipage}
+\end{table}

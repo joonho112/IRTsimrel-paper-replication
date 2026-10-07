@@ -1,0 +1,3 @@
+"design","n_cells","r2_reliability_on_log_items","vif"
+"original bundle (the diagonal)",9,0.980719194075655,51.8650519031138
+"arm B (fully crossed)",27,2.08324398992585e-29,1

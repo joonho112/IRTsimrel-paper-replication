@@ -1,0 +1,34 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[!htb]
+\centering
+\caption{Three information indices and what distinguishes them}
+\label{tab:indices}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{3.1cm}@{}}
+\toprule
+ & Mean-information $\rhotilde$ & Pointwise $\rhopw$ & Inverse-information $\wbar$ \\
+\midrule
+Construction & transform of mean information & mean of pointwise transforms & transform of mean reciprocal information \\
+\addlinespace
+Positive (finite inverse-information moment) for a population with a polynomial tail & yes & yes & no: extended value zero \\
+\addlinespace
+Turning points on the 32 finite grids of \cref{fig:functionals} ($c\in[.02,50]$) & none & $c$ from 9.6 to 27.2 & $c$ from 1.0 to 10.5 \\
+\addlinespace
+Behavior as $c\to\infty$ (density positive at the difficulties) & $1-\rhotilde=O(c^{-1})$ & $O(c^{-1}\log c)\to0$ & $\to0$ \\
+\addlinespace
+Targets unreachable within $[0.1,10]$ in the 768-cell census & 20 of 768 & not targeted & 167 of 576 eligible cells \\
+\addlinespace
+Gap below $\rhotilde$ at the calibrated root (743 cells; median, 90th percentile) & --- & .005, .034 & .008, .22 (559 cells) \\
+\addlinespace
+Distance to a fitted EAP coefficient in one 30-item Rasch example & .00508 & .00023 & .00141 \\
+Distance to the fitted WLE coefficient in the same example & .01716 & .01231 & .01068 \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\emph{Note.} Turning points and limits are properties of the finite grids and the propositions of \cref{app:targets}, not of every population. The census counts targets outside the strict interior of the range reached on 20,000 nodes within the declared interval; the inverse-information census excludes 192 heavy-tailed cells whose population index is zero. The EAP and WLE distances come from one retained example with 6,000 persons under a standard normal population and are discrepancies from fitted coefficients, not errors against a population truth; the 48-cell correspondence study is summarized in \cref{app:targets}.
+\end{minipage}
+\end{table}

@@ -1,0 +1,56 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[!htbp]
+\centering
+\caption{Turning points of the pointwise and inverse-information curves on the 32 finite grids of \cref{fig:functionals}}
+\label{tab:turning}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+ & & \multicolumn{2}{c}{pointwise $\rhopw$} & \multicolumn{2}{c}{inverse-information $\wbar$} & \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Shape & $I$ & $c$ at maximum & maximum & $c$ at maximum & maximum & $\rhotilde$ monotone \\
+\midrule
+\multicolumn{7}{l}{\emph{2PL}} \\
+normal & 10 & 10.46 & .930 & 2.84 & .825 & yes \\
+normal & 20 & 16.15 & .966 & 3.68 & .912 & yes \\
+normal & 40 & 17.62 & .985 & 4.78 & .961 & yes \\
+normal & 60 & 14.80 & .988 & 3.68 & .972 & yes \\
+skewed & 10 & 9.59 & .922 & 1.19 & .710 & yes \\
+skewed & 20 & 16.15 & .958 & 1.68 & .844 & yes \\
+skewed & 40 & 16.15 & .976 & 1.68 & .920 & yes \\
+skewed & 60 & 12.44 & .979 & 1.68 & .942 & yes \\
+bimodal & 10 & 14.80 & .951 & 6.77 & .917 & yes \\
+bimodal & 20 & 16.15 & .979 & 6.21 & .958 & yes \\
+bimodal & 40 & 27.21 & .993 & 10.46 & .985 & yes \\
+bimodal & 60 & 24.94 & .996 & 8.06 & .990 & yes \\
+heavy-tailed & 10 & 11.41 & .927 & --- & --- & yes \\
+heavy-tailed & 20 & 13.57 & .956 & --- & --- & yes \\
+heavy-tailed & 40 & 12.44 & .972 & --- & --- & yes \\
+heavy-tailed & 60 & 13.57 & .978 & --- & --- & yes \\
+\multicolumn{7}{l}{\emph{3PL, $g=.20$}} \\
+normal & 10 & 9.59 & .882 & 2.00 & .659 & yes \\
+normal & 20 & 14.80 & .947 & 2.00 & .799 & yes \\
+normal & 40 & 16.15 & .974 & 2.19 & .898 & yes \\
+normal & 60 & 20.96 & .984 & 2.84 & .936 & yes \\
+skewed & 10 & 13.57 & .900 & 1.68 & .604 & yes \\
+skewed & 20 & 16.15 & .944 & 1.84 & .785 & yes \\
+skewed & 40 & 17.62 & .969 & 2.00 & .879 & yes \\
+skewed & 60 & 14.80 & .976 & 1.68 & .910 & yes \\
+bimodal & 10 & 12.44 & .908 & 6.21 & .844 & yes \\
+bimodal & 20 & 16.15 & .966 & 5.22 & .923 & yes \\
+bimodal & 40 & 20.96 & .987 & 5.69 & .964 & yes \\
+bimodal & 60 & 27.21 & .993 & 6.77 & .980 & yes \\
+heavy-tailed & 10 & 11.41 & .893 & --- & --- & yes \\
+heavy-tailed & 20 & 17.62 & .945 & --- & --- & yes \\
+heavy-tailed & 40 & 13.57 & .962 & --- & --- & yes \\
+heavy-tailed & 60 & 17.62 & .973 & --- & --- & yes \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\emph{Note.} Each grid evaluates the three indices on 4,001 density-weighted nodes with represented variance one at 91 log-spaced multipliers from .02 to 50. The maximum and its location are grid values, not population quantities. For the heavy-tailed population the finite-grid inverse-information curve is a truncation of a divergent expectation (\cref{prop:tail}) and is not reported. The mean-information curve increased across every grid.
+\end{minipage}
+\end{table}

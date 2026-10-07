@@ -1,0 +1,21 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Sensitivity to ten SAC settings across 60 design cells}\label{tab:s3-step}
+{\footnotesize\setlength{\tabcolsep}{4pt}\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Setting & $a$ & $A$ & $\gamma$ & Iterations & Draws & Bias & $\mathrm{RMSE}/\sqrt{60}$ & RMSE & Converged & Median s \\
+\midrule
+cfg06 & $1.0$ & $50$ & $0.55$ & 1000 & 1000 & $-0.001$ & $0.011$ & $0.086$ & $1.000$ & $20.3$ \\
+cfg10 & $1.0$ & $50$ & $0.67$ & 1000 & 500 & $0.002$ & $0.012$ & $0.089$ & $1.000$ & $10.3$ \\
+cfg03 & $2.0$ & $50$ & $0.67$ & 1000 & 1000 & $-0.004$ & $0.010$ & $0.078$ & $1.000$ & $20.1$ \\
+cfg02 & $0.5$ & $50$ & $0.67$ & 1000 & 1000 & $-0.007$ & $0.011$ & $0.082$ & $1.000$ & $20.1$ \\
+cfg01 & $1.0$ & $50$ & $0.67$ & 1000 & 1000 & $-0.008$ & $0.011$ & $0.082$ & $1.000$ & $20.0$ \\
+cfg05 & $1.0$ & $200$ & $0.67$ & 1000 & 1000 & $0.008$ & $0.010$ & $0.076$ & $1.000$ & $20.0$ \\
+cfg04 & $1.0$ & $10$ & $0.67$ & 1000 & 1000 & $-0.010$ & $0.010$ & $0.076$ & $1.000$ & $19.7$ \\
+cfg09 & $1.0$ & $50$ & $0.67$ & 300 & 1000 & $0.017$ & $0.010$ & $0.077$ & $1.000$ & $6.5$ \\
+cfg07 & $1.0$ & $50$ & $0.90$ & 1000 & 1000 & $0.017$ & $0.013$ & $0.101$ & $1.000$ & $20.1$ \\
+cfg08 & $1.0$ & $50$ & $0.67$ & 100 & 1000 & $0.059$ & $0.013$ & $0.102$ & $0.717$ & $3.5$ \\
+\bottomrule
+\end{tabular}}
+\floatnote{Rows are ordered by absolute mean multiplier error relative to the reference solution. Converged is the recorded success fraction. The column $\mathrm{RMSE}/\sqrt{60}$ is a scaled RMSE, not a centered Monte Carlo standard error. The fractional design does not separate all tuning effects or identify optimal settings.}
+\end{table}

@@ -1,0 +1,20 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Targets excluded by the preliminary endpoint screen}
+\label{tab:s2-reachability-unpruned}
+{\small\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{$\rhotilde$} & \multicolumn{3}{c}{$\wbar$} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Target & Cells & Unreachable & Share & Cells & Unreachable & Share \\
+\midrule
+$0.50$ & 128 & 0 & $0.000$ & 96 & 0 & $0.000$ \\
+$0.60$ & 128 & 0 & $0.000$ & 96 & 3 & $0.031$ \\
+$0.70$ & 128 & 0 & $0.000$ & 96 & 10 & $0.104$ \\
+$0.80$ & 128 & 0 & $0.000$ & 96 & 23 & $0.240$ \\
+$0.90$ & 128 & 1 & $0.008$ & 96 & 52 & $0.542$ \\
+$0.95$ & 128 & 19 & $0.148$ & 96 & 79 & $0.823$ \\
+\bottomrule
+\end{tabular}}
+\floatnote{Each target must lie strictly between the endpoint values on $[.1,10]$, using 20,000 nodes. The screen excludes 20 of 768 mean-information requests and 167 of 576 inverse-information requests. The latter omit 192 heavy-tailed cases with infinite reciprocal-information moment. Respectively 3 and 6 target--endpoint pairs lie within .001 of a boundary. Interior roots can be missed by this screen.}
+\end{table}

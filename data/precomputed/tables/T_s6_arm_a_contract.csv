@@ -1,0 +1,7 @@
+"te_mean","te_sd","rho_low","rho_high","se_ratio_at_low","se_ratio_at_high","se_ratio_range","reject_at_low","reject_at_high","reject_range","understated_everywhere","understated_at_original_rung","across_rung_comparison"
+0,0,0.5,0.9,1.00750598552832,1.05232013920697,0.0845975603843687,0.06,0.041,0.026,FALSE,FALSE,"independent_runs"
+0.4,0,0.5,0.9,1.00705050919112,1.05254294415732,0.0837224936044969,0.466,0.723,0.257,FALSE,FALSE,"independent_runs"
+0,0.2,0.5,0.9,0.958596183987406,1.00120968193576,0.107659377240234,0.063,0.05,0.022,FALSE,TRUE,"independent_runs"
+0.4,0.2,0.5,0.9,0.953062076414505,0.998406973112445,0.108221285439341,0.446,0.703,0.257,FALSE,TRUE,"independent_runs"
+0,0.4,0.5,0.9,0.901042632261295,0.89391038733139,0.105009607573586,0.076,0.075,0.028,TRUE,TRUE,"independent_runs"
+0.4,0.4,0.5,0.9,0.900257279422642,0.891514880772233,0.110284390619252,0.442,0.672,0.232,TRUE,TRUE,"independent_runs"

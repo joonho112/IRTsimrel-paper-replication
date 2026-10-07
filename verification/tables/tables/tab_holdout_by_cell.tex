@@ -1,0 +1,32 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[!htbp]
+\centering
+\caption{Fresh-draw mean absolute error of the 12 holdout cells at each node count (20 seeds per cell)}
+\label{tab:holdout-cell}
+\footnotesize
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{lllrrrrrrr}
+\toprule
+Model & Shape & $I$ & $M$ = 500 & 1k & 2.5k & 5k & 10k & 20k & 50k \\
+\midrule
+Rasch & normal & 10 & .0089 & .0061 & .0037 & .0029 & .0023 & .0016 & .0010 \\
+Rasch & normal & 40 & .0109 & .0058 & .0039 & .0030 & .0020 & .0021 & .0009 \\
+Rasch & skewed & 10 & .0139 & .0103 & .0051 & .0032 & .0032 & .0017 & .0019 \\
+Rasch & skewed & 40 & .0169 & .0094 & .0056 & .0045 & .0041 & .0020 & .0013 \\
+2PL & normal & 10 & .0080 & .0065 & .0040 & .0035 & .0016 & .0012 & .0011 \\
+2PL & normal & 40 & .0110 & .0076 & .0048 & .0032 & .0021 & .0015 & .0011 \\
+2PL & skewed & 10 & .0151 & .0093 & .0078 & .0045 & .0021 & .0021 & .0017 \\
+2PL & skewed & 40 & .0112 & .0084 & .0045 & .0050 & .0035 & .0018 & .0014 \\
+3PL, $g=.20$ & normal & 10 & .0082 & .0054 & .0042 & .0031 & .0020 & .0011 & .0010 \\
+3PL, $g=.20$ & normal & 40 & .0092 & .0089 & .0035 & .0030 & .0022 & .0017 & .0012 \\
+3PL, $g=.20$ & skewed & 10 & .0111 & .0091 & .0055 & .0046 & .0030 & .0019 & .0018 \\
+3PL, $g=.20$ & skewed & 40 & .0156 & .0132 & .0049 & .0040 & .0033 & .0023 & .0018 \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\emph{Note.} Target .70; each entry is the mean absolute error, over 20 seeds, of the calibrated form's mean-information index on 200,000 fresh draws (their sample variance) against the target. The pooled means over the 12 cells are the fresh-draw line of \cref{fig:holdout}. Within a node count the cells differ because information is averaged over different populations and forms; the skewed population is the harder case at every node count, whereas test length has no consistent ordering across node counts.
+\end{minipage}
+\end{table}

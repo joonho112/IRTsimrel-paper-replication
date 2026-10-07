@@ -1,0 +1,39 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[!htb]
+\centering
+\caption{What to report for a reliability-targeted simulation design}
+\label{tab:checklist}
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.50\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{What to report} & \textbf{Why it matters} \\
+\midrule
+\textbf{Index and target.} Name the information index, give its formula and state the target value. & This defines the measurement condition. Different information indices are not interchangeable, and none is a score reliability. \\
+\addlinespace[4pt]
+\textbf{Reference population and variance.} Specify the ability distribution and whether each calculation uses the population variance or a sample variance. & The same items can provide different information for different populations. The variance rule can change the index even when the solver residual is negligible. \\
+\addlinespace[4pt]
+\textbf{Fixed and adjusted quantities.} State which item parameters, population features and design factors are held fixed, and which change. & This makes clear what differs between calibrated conditions and helps readers interpret the comparison. \\
+\addlinespace[4pt]
+\textbf{Effect scale, if applicable.} State the scale on which simulated effects are held fixed and how they are rescaled during calibration. & A fixed logit coefficient can imply different ability-scale effects as discriminations change. \\
+\addlinespace[4pt]
+\textbf{Calibration across forms.} State whether each form is calibrated separately or one multiplier is used for a population of forms. & Calibrating mean information over forms does not make every form meet the target. \\
+\addlinespace[4pt]
+\textbf{Numerical settings.} Give the algorithm, integration rule, node count, search interval, tolerance and rule for choosing among multiple solutions. & These settings make the calculation reproducible. A failed search within the stated bounds does not show that the target is impossible. \\
+\addlinespace[4pt]
+\textbf{Accuracy on calibration nodes and fresh draws.} Report the solver residual and the achieved index on an independent ability sample, with its size. & The solver can match the target on its own nodes while missing it on new draws. \\
+\addlinespace[4pt]
+\textbf{Calibrated item parameters.} Report the multiplier and summarize the resulting discriminations. & Reaching a target may require item parameters that are implausible for the intended application. \\
+\addlinespace[4pt]
+\textbf{Information beyond the target.} Report relevant companion indices and information curves. & Equal overall indices can conceal different precision near a cut score or in the tails. \\
+\addlinespace[4pt]
+\textbf{Calibration outcomes.} Give attempted, successful, infeasible and failed counts, and explain how unsuccessful runs were handled. & Reporting only successful runs can hide unattainable conditions and make performance look better than it is. \\
+\bottomrule
+\end{tabularx}
+
+\smallskip
+\begin{minipage}{\textwidth}
+\footnotesize
+\emph{Note.} For a simulation without a target, report the achieved index for each condition under the stated reference population and variance rule.
+\end{minipage}
+\end{table}

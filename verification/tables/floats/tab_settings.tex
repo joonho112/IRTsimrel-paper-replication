@@ -1,0 +1,29 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Study settings and recorded package defaults}\label{tab:settings}
+{\scriptsize\setlength{\tabcolsep}{3pt}\begin{adjustbox}{max width=\textwidth}\begin{tabular}{>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}c}
+\toprule
+Algorithm & Setting & Package default & Used here & Differs \\
+\midrule
+EQC & quadrature size M & \texttt{10000L} & \texttt{20000} & yes \\
+EQC & search interval for c & \texttt{c(0.3,} \texttt{3)} & \texttt{c(0.1,} \texttt{10)} & yes \\
+EQC & root tolerance & \texttt{1e-04} & \texttt{1e-06} & yes \\
+EQC & root policy & \code{"lowest\_increasing"} & \code{lowest\_increasing} & -- \\
+SAC & presample size M\_pre & \texttt{10000L} & \texttt{20000} & yes \\
+SAC & draws per iteration M\_per\_iter & \texttt{500L} & \texttt{1000} & yes \\
+SAC & iterations n\_iter & \texttt{300L} & \texttt{1000} & yes \\
+SAC & burn-in & \texttt{floor(n\_iter} \texttt{/} \texttt{2)} & \texttt{floor(n\_iter} \texttt{/} \texttt{2)} & -- \\
+SAC & step size (a, A, gamma) & \texttt{(1,} \texttt{50,} \texttt{0.67)} & \texttt{(1,} \texttt{50,} \texttt{0.67)} & -- \\
+SAC & projection interval for c & \texttt{c(0.01,} \texttt{20)} & \texttt{c(0.05,} \texttt{20)} & yes \\
+SAC & item resampling & \texttt{TRUE} & \texttt{FALSE} \texttt{for} \texttt{the} \texttt{fixed-form} \texttt{arms;} \texttt{TRUE} \texttt{for} \texttt{the} \code{superpopulation} \texttt{arm} & yes \\
+SAC (item superpopulation) & item aggregation & \texttt{NULL} & \code{functional\_of\_mean\_information} & yes \\
+SAC (item superpopulation) & reported reliability outputs & \texttt{--} & \code{rho\_at\_expected\_information} \texttt{(primary);} \code{mean\_random\_form\_reliability} \code{(descriptive)} & -- \\
+SAC & starting value & \texttt{NULL} & \texttt{the} \texttt{EQC} \texttt{solution} \texttt{(warm} \texttt{start)} & yes \\
+both & target ladder & \texttt{--} & \texttt{0.5,} \texttt{0.6,} \texttt{0.7,} \texttt{0.8,} \texttt{0.9,} \texttt{0.95} & -- \\
+both & replications per calibrated cell & \texttt{--} & \texttt{1000} & -- \\
+both & sample sizes in the replication stage & \texttt{--} & \texttt{100,} \texttt{250,} \texttt{500,} \texttt{1000,} \texttt{2000} & -- \\
+both & global seed & \texttt{--} & \texttt{20260826} & -- \\
+\bottomrule
+\end{tabular}\end{adjustbox}}
+\floatnote{Fixed-form runs use version 0.3.0; the form-population extension uses 0.3.1. Defaults are version-specific. SAC may narrow the requested interval during branch selection. Its main fixed-form comparison starts at the EQC solution. The 1,000 replications and sample-size ladder refer to person redraws after calibration, not independently calibrated forms.}
+\end{table}

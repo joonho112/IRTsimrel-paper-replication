@@ -1,0 +1,6 @@
+"claim","threshold","value","met"
+"implicit reliability moves enough to matter","range of cell medians of rho_tilde >= 0.20",0.433688918231781,TRUE
+"the pool contrast is material","median pool difference >= 0.02 in at least half the recipes",0.12,FALSE
+"shape is a minor source","shape accounts for <= 5 per cent of explained variance",0.000451321022131695,TRUE
+"the coverage gap is real (all units)","at least 20 per cent of the corpus below the atlas minimum",0.0318543799772469,FALSE
+"the coverage gap is real (dichotomous units)","at least 20 per cent of the corpus below the atlas minimum",0.0852017937219731,FALSE

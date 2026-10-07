@@ -1,0 +1,10 @@
+"diagnostic","n_original","n_retry_selected","denominator"
+"optimizer_not_converged",0,16,461
+"gradient_failed",453,16,461
+"hessian_failed",3,16,461
+"kkt_failed",0,16,461
+"boundary_cholesky",355,318,461
+"boundary_any_zero_variance",0,0,461
+"boundary_slope_variance",0,0,461
+"boundary_correlation",455,439,461
+"singular",456,318,461

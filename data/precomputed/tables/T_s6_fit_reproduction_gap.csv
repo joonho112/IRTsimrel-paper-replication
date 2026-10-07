@@ -1,0 +1,2 @@
+"n_rows","n_equivalent","n_nonreproduced","n_detection_decision_mismatch","max_rowwise_error_equivalent","min_rowwise_error_nonreproduced","empty_gap_ratio","locked_tolerance","retained_lme4_version_available","csv_rounding_explanation","likely_cause"
+461,448,13,0,0.000283220682836482,0.00303502723045357,10.7161214359682,0.001,FALSE,FALSE,"alternate_boundary_path_platform_or_BLAS_inference"

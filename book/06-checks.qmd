@@ -1,0 +1,13 @@
+<!-- Author: JoonHo Lee (jlee296@ua.edu) -->
+
+# Check a result before interpreting it
+
+Run `Rscript run_all.R verify` after downloading the repository. It checks every distributed file against the release manifest, reconstructs selected paper summaries from the underlying rows, and tests several mathematical properties independently of those summaries.
+
+The numerical checks include the single-item information formula, ordering of the three finite-grid indices, invariance to a change of latent coordinates, stable tail calculations, and the distinction between a transformed expectation and an expectation of transforms. Deliberately invalid inputs must raise errors.
+
+For a rerun, inspect the recorded design, session, statuses, and comparison table. A completed process is not by itself evidence of a successful calibration. Likewise, a smoke run checks execution and selected values; it does not supply enough repetitions for the paper's Monte Carlo summaries.
+
+If a result differs, first check the package version, condition identifier, seed, variance convention, and external-pool checksum. Then consider platform differences, especially for mixed-model boundary fits. Preserve the discrepant output so it can be examined.
+
+`verification/release-checks.md` records what was actually run while preparing this release. Full simulation paths are available, but the complete historical compute workload was not rerun as part of packaging.

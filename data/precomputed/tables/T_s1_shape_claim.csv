@@ -1,0 +1,2 @@
+"variance_share_of_explained","threshold_0.05_met","median_spread_across_shapes","max_spread_across_shapes","predicted_ordering_skew_normal_bimodal","mean_normal","mean_skew_pos","mean_bimodal","mean_heavy_tail","share_bimodal_lowest","share_heavy_tail_highest","observed_ordering"
+0.000451321022131695,TRUE,0.00520769892079298,0.0172549566457679,0,0.781723361521753,0.782043405335785,0.779651024892794,0.784545528784933,0.74,0.74,"bimodal < normal < skew_pos < heavy_tail"

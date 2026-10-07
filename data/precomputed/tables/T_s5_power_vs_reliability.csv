@@ -1,0 +1,5 @@
+"arm","median_realized_rho","power_mh_successful_only","power_mh_failures_as_nonrejections","n_mh_failed","n_mh_attempted","power_lr","precision_status","power_gain_per_.1_rho"
+"target_060",0.599944875861801,0.423764841954996,0.423639034146545,57,191996,0.441831631589915,"point_estimate_only_form_cluster_records_not_retained",NA
+"target_075",0.74993299161004,0.618715353285669,0.61806105438633,203,191960,0.637179721099961,"point_estimate_only_form_cluster_records_not_retained",0.129977305440589
+"uncontrolled",0.813854682922362,0.762346579424451,0.762171875,44,192000,0.778669097538742,"point_estimate_only_form_cluster_records_not_retained",0.224698726191394
+"target_090",0.899925805294872,0.87435216190581,0.871261174701312,677,191504,0.885221352462235,"point_estimate_only_form_cluster_records_not_retained",0.130131430140535

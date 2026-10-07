@@ -1,0 +1,66 @@
+# Study design and prespecified settings.
+# Author: JoonHo Lee (jlee296@ua.edu)
+# License: MIT
+
+
+global_seed: 20260828
+
+target:
+  citation: "Gilbert, Kim and Miratrix (2023), JEBS 48(6), 889-913"
+  dataverse: "DVN/QARRYT"
+  license: "CC BY-NC-SA 4.0"
+
+original:
+  dgp: "logit p = (theta - b_i) * disc + te_i * treat"
+  theta: {dist: normal, mean: 0, sd: 1}
+  b:     {dist: normal, mean: 0, sd: 1}
+  disc: 1.7
+  te:   {dist: normal}
+  treat_assignment: bernoulli_half
+  models:
+    constant: "correct ~ treat + (1|person) + (1|item)"
+    varying:  "correct ~ treat + (1|person) + (treat|item)"
+  main_grid:
+    n_sub: 500
+    n_items: 20
+    te_mean: [0, 0.4]
+    te_sd:   [0, 0.2, 0.4]
+    reps: 2000
+  power_grid:
+    n_sub:   [100, 300, 500]
+    n_items: [10, 20, 40]
+    te_sd:   [0.1, 0.2, 0.4]
+    reps: 100
+
+fidelity:
+  reps: 2000
+  quantities: [mean_estimate, mean_se, empirical_sd, se_ratio, reject_rate, sig_het_rate]
+  gate: "rates and mean estimate within Bonferroni-corrected difference bands; mean SE, empirical SD, and SE ratio within prespecified 5 per cent relative equivalence margins"
+
+te_scale:
+  primary: theta_fixed
+  sensitivity: logit_fixed
+
+arm_a:
+  n_items: 20
+  n_sub: 500
+  reliability_ladder: [0.50, 0.60, 0.70, 0.80, 0.887, 0.90]
+  te_mean: [0, 0.4]
+  te_sd:   [0, 0.2, 0.4]
+  reps: 1000
+  contract: >
+    How the constant model's standard-error shortfall (model SE divided by
+    empirical SD) and its false-positive rate depend on the reliability the
+    design produced. The article establishes both at a single implicit point.
+
+arm_b:
+  n_items: [10, 20, 40]
+  reliability: [0.80, 0.887, 0.94]
+  n_sub: 500
+  te_mean: 0
+  te_sd: [0.1, 0.2, 0.4]
+  reps: 200
+  contract: >
+    Endpoint two-path/Shapley attribution of the diagonal change to item count
+    and reliability, with independently simulated rung uncertainty. The
+    original design identifies only their bundled movement.

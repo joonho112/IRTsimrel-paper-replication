@@ -1,0 +1,4 @@
+"score","candidate_first","candidate_second","comparison","n","median_difference","n_favouring_second","sign_test_p","median_score_mean_se_heuristic","claim_status","supports_reported_cross_cell_claim"
+"EAP","w_bar","rho_psd","|eap_rel_mean - w_bar| - |eap_rel_mean - rho_psd|",48,0.000618205787328518,28,0.31232680747327,0.000944925191774828,"unresolved_eap_psd_vs_wbar",FALSE
+"EAP","rho_tilde","rho_psd","|eap_rel_mean - rho_tilde| - |eap_rel_mean - rho_psd|",48,0.00177885876695555,37,0.000222244962621688,0.000944925191774828,"supported_eap_psd_over_tilde",TRUE
+"WLE","rho_psd","w_bar","|wle_rel_mean - rho_psd| - |wle_rel_mean - w_bar|",48,0.00145162521307052,43,1.36804843009486e-08,0.000972377516218545,"supported_wle_wbar_over_psd",TRUE

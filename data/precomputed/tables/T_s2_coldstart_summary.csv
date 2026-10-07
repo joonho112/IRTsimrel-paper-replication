@@ -1,0 +1,3 @@
+"start","n","median_ratio_to_eqc","q10","q90","median_abs_dev","achieved_reliability_mae","share_identical_to_warm","evidence_scope"
+"cold",729,1.00631193627005,0.814250155453962,1.19956858828119,0.070345587087574,0.00206105805828811,0.139917695473251,"one_stochastic_seed_per_fixed_cell"
+"warm",729,1.00070291127368,0.867699945781439,1.14184053592945,0.04790508172296,NA,NA,"one_stochastic_seed_per_fixed_cell"

@@ -1,0 +1,2 @@
+"bootstrap_replications","bootstrap_seed","bootstrap_seed_token_sha256","rng_kind","rng_normal_kind","rng_sample_kind","resampling_unit","covariance_preserved","decision_timing"
+2000,721279504,"2b19c26b3c6f0afa9085ac733f1a4b32840e56d2c1677ec3e53fae2318cd06c4","Mersenne-Twister","Inversion","Rejection","form_cluster_block_within_structural_cell","all_arms_and_all_variants","frozen_before_phase4_rerun_results"

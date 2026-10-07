@@ -1,0 +1,14 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{SAC multipliers with and without an EQC starting value}
+\label{tab:s2-coldstart}
+{\small\begin{tabular}{lrrrrr}
+\toprule
+Start & Cells & Median ratio & 10th & 90th & Median $|\Delta|$ \\
+\midrule
+Cold & 729 & $1.0063$ & $0.814$ & $1.200$ & $0.0703$ \\
+Warm (as run) & 729 & $1.0007$ & $0.868$ & $1.142$ & $0.0479$ \\
+\bottomrule
+\end{tabular}}
+\floatnote{Both rows use the same 729 cells under version 0.3.0. Warm starts use the EQC solution; cold starts supply no starting value. The ratio is SAC divided by EQC, and $|\Delta|$ is their absolute difference. Quantiles describe variation across cells; each arm follows its own stochastic path.}
+\end{table}

@@ -1,0 +1,6 @@
+"recommendation","default_used_here","evidence"
+"iterations",1000,"bias falls from 0.0590 at n_iter=100 to -0.0076 at n_iter=1000"
+"draws per iteration",1000,"reported in T_s3_step.csv"
+"step scale a",1,"reported in T_s3_step.csv"
+"step offset A",50,"reported in T_s3_step.csv"
+"step exponent gamma",0.67,"reported in T_s3_step.csv"

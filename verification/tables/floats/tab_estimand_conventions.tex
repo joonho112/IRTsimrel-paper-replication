@@ -1,0 +1,18 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[htbp]\centering
+\caption{Variance and integration rules for calibration and evaluation}\label{tab:estimand-conventions}
+{\footnotesize\begin{tabular}{>{\raggedright\arraybackslash}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}}
+\toprule
+Context & Variance used & Interpretation \\
+\midrule
+Population functional & $v=\operatorname{Var}_G(\theta)$ & A property of the stated latent distribution \\
+Fixed-node EQC & $n-1$ sample variance of its fixed node draw & Part of the retained numerical objective; the node rule approximates the population integral \\
+Fixed-form SAC & Presample variance, frozen through updates & Fresh stochastic information batches retain the same variance factor \\
+Weighted quadrature & Normalized weighted population variance & A discrete weighted distribution; truncation and discretization can affect its moments \\
+S2 fresh-node evaluation & The calibration presample variance & Changes the information evaluation rule while retaining the variance convention \\
+S3 holdout evaluation & $n-1$ sample variance of the holdout draw & Changes both the information rule and its empirical variance factor \\
+Worked software example & Calibration uses its node variance; holdout sets $v=1$ & The known standard-normal population variance is supplied explicitly for the holdout \\
+Realized response sample & $n-1$ variance where a sample variance is reported & An empirical statistic; fitted-score reliability has its own definition \\
+\bottomrule\end{tabular}}
+\floatnote{A population variance of one does not force finite draws or truncated quadrature to have variance one. \Cref{app:theta-var} compares the variance rules; \cref{app:sa04} defines score reliability.}
+\end{table}

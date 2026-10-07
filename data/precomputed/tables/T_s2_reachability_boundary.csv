@@ -1,0 +1,2 @@
+"boundary_tolerance","endpoint_rule","feasibility_quadrature_M","tilde_near_boundary","wbar_near_boundary","conclusion"
+0.001,"strict_interior_lo_lt_target_lt_hi",20000,3,6,"boundary sensitivity does not alter the broad ordering"

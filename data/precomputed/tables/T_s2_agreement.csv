@@ -1,0 +1,2 @@
+"n","intercept","slope","slope_lo","slope_hi","r","median_ratio","n_high_cstar","median_ratio_high_cstar","attenuation_present"
+729,0.0202403704146802,0.983378917582117,0.972439119956689,0.994318715207545,0.988528652576149,1.00070291127368,414,0.992056776667782,FALSE

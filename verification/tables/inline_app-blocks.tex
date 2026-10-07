@@ -1,0 +1,25 @@
+% Author: JoonHo Lee (jlee296@ua.edu)
+\begin{table}[!htb]
+\centering
+\caption{Designs and evaluation rules for the two calibration studies}
+\label{tab:app-blocks}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.17\textwidth}XX@{}}
+\toprule
+ & Fixed-form validation & Fresh-draw evaluation \\
+\midrule
+Software & \texttt{IRTsimrel} 0.3.0, \texttt{eqc\_calibrate()} & Same package and run series \\
+Item models & Rasch, 2PL, 3PL with $g=.20$, 3PL with beta-distributed $g$ & Rasch, 2PL, 3PL with $g=.20$ \\
+Ability distributions & Normal, bimodal, positively skewed, heavy-tailed & Normal and positively skewed \\
+Difficulties & Parametric and Item Response Warehouse & Parametric \\
+Test lengths & 10, 20, 40, 60 & 10, 40 \\
+Targets & .50, .60, .70, .80, .90, .95 & .70 \\
+Calibration nodes & 20,000 per cell & 500, 1,000, 2,500, 5,000, 10,000, 20,000, 50,000 \\
+Search & $[0.1,10]$; lowest increasing crossing; tolerance $10^{-6}$ on $\log c$ & Same interval, policy and tolerance \\
+Variance & Calibration-node sample variance & Calibration-node sample variance \\
+Runs & 768 nominal cells; 748 after screening; 743 successful & 12 cells $\times$ 20 seeds $\times$ 7 node counts $=$ 1,680 calibrations \\
+Evaluation & Residual on the calibration nodes & Index on 200,000 fresh draws, using their sample variance \\
+\bottomrule
+\end{tabularx}
+\end{table}
